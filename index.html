@@ -1,48 +1,115 @@
-
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
-        <title>Prdhyumna Pokharel's Personal Website</title>
-        <!-- Favicon-->
-        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <!-- Font Awesome icons (free version)-->
-        <script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=dTXieP62FDttOetxAYiomvaU4uFM-NdLnI5dGcYUUa3Hmz_lP1yszGIPEKNt45UWcaYWiK0FsagQXXYbR6lTdA" charset="UTF-8"></script><script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
-        <!-- Google fonts-->
-        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
-        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
-        <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
-        <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="css/styles.css" rel="stylesheet" />
-    </head>
-    <body id="page-top">
-        <!-- Masthead-->
-        <header class="masthead bg-primary text-white text-center">
-            <div class="container d-flex align-items-center flex-column">
-                <!-- Masthead Avatar Image-->
-                <img class="masthead-avatar mb-5" src="pradhyumnaji.jpg" alt="..." />
-                <!-- Masthead Heading-->
-                <h2 class="masthead-heading text-uppercase mb-0">प्रद्युम्न पोखरेल</h2>
-                <!-- Masthead Subheading-->
-                <p class="masthead-subheading font-weight-light mb-0">Class-7, Happy Land Higher Secondary School</p>
-                <p>Please follow me in facebook and subscribe my page</p>
-                            
-               
-            </div>
-        </header>
-        <!-- Copyright Section-->
-        <div class="copyright py-4 text-center text-white">
-            <div class="container"><small>Copyright &copy; 2023 Pradhyumna Pokharel</small></div>
-        </div>
-        <!-- Bootstrap core JS-->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- Core theme JS-->
-        <script src="js/scripts.js"></script>
-        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
-    </body>
+<html>
+  <head>
+    <title>Pradyumna Ji's Website</title>
+  </head>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #333;
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      padding: 20px;
+    }
+    h1 {
+      margin: 0;
+    }
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+    nav li {
+      margin-right: 20px;
+    }
+    nav li:last-child {
+      margin-right: 0;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+  </style>
+  <body>
+    <script>
+      function searchFunction() {
+        var input, filter, table, tr, td, i, txtValue;
+        input = document.getElementById("search");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("contacts");
+        tr = table.getElementsByTagName("tr");
+        for (i = 0; i < tr.length; i++) {
+          td = tr[i].getElementsByTagName("td")[0];
+          if (td) {
+            txtValue = td.textContent || td.innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+              tr[i].style.display = "";
+            } else {
+              td = tr[i].getElementsByTagName("td")[1];
+              txtValue = td.textContent || td.innerText;
+              if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                tr[i].style.display = "";
+              } else {
+                tr[i].style.display = "none";
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <header>
+      <h1>Welcome to Pradyumna's Website</h1>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section id="home">
+        <h2>Home</h2>
+        <p></p>
+        <img src="pradhyumnaji.jpg" alt="Pradyumna Ji">
+      </section>
+      <section id="about">
+        <h2>About Pradyumna </h2>
+        <p>Hi I am Pradyumna. I am ten years old. I live in Rajbiraj Saptari. I am a bonafide student studying at grade seven in Happy Land Higher Secondary School. My hobby is playing cricket. I am learning computer programming with uncle now a days.</p>
+      </section>
+      <section id="services">
+        <h2>Contact me</h2>
+        <input type="text" id="search" onkeyup="searchFunction()" placeholder="Search for names or numbers..">
+  <table id="contacts">
+    <thead>
+      <tr>
+      
+        <th>Name</th>
+        <th>Contact No.</th>
+    
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+          <td>Father<br>Poshraj Pokharel</td>
+        <td>-</td></tr>
+      <tr>
+          <td>Mother <br>Kalika Pokharel<br></td>
+       
+        <td><a href="tel:+9779862850486">9862850486<br><button class="btn" onclick="call('+9779862850486')">Call</button></a></td>
+
+      </section>
+  
+    </main>
+
+  </body>
 </html>
